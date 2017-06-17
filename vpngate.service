@@ -1,0 +1,9 @@
+[Unit]
+Description=vpngate fetcher
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/vpn_looper.sh
+ExecStop=/usr/local/bin/vpn_looper.sh kill
+PIDFile=/var/run/vpngate.pid
+
